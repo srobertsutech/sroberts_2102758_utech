@@ -1,0 +1,271 @@
+/*CSS*/
+
+/* Variables */
+:root {
+    --primary-color: #789BC5;
+    --secondary-color: #A7C7E7;
+    --accent-color: #C5B8E8;
+    --background-color: #F3F7FC;
+    --surface-color: #FFFFFF;
+    --text-color: #34445B;
+    --muted-color: #718096;
+    --border-color: #DCE7F3;
+
+    --font-family: "Trebuchet MS", Arial, sans-serif;
+    --radius: 12px;
+}
+
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Element selectors */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: 0 0 15px;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: var(--primary-color);
+}
+
+h4 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+}
+
+/* Grouped selector*/
+em,
+figcaption {
+    color: var(--muted-color);
+}
+
+/* Pseudo-class selector */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+/* Header css */
+body > header {
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Navigation*/
+/*Descendant and child selector */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul > li > a {
+    display: block;
+    padding: 8px 18px;
+    color: var(--surface-color);
+    text-decoration: none;
+    border: 1px solid var(--surface-color);
+    border-radius: 30px;
+}
+
+nav ul > li > a:hover {
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+}
+
+/* Main */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Section */
+main section {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+/* Personal development page */
+/* ID selector */
+#cures h3,
+#laws h3 {
+    padding: 12px 16px;
+    background-color: #EDF4FC;
+    border-left: 4px solid var(--secondary-color);
+    border-radius: var(--radius);
+}
+
+#cures h4,
+#laws h4 {
+    color: var(--primary-color);
+}
+
+#cures h4 + p,
+#laws h4 + p {
+    padding: 16px;
+    background-color: #F7FAFE;
+    border-radius: var(--radius);
+}
+
+#takeaway {
+    background-color: #EAF2FB;
+    border-color: var(--secondary-color);
+}
+
+#takeaway h2 {
+    border-bottom-color: var(--accent-color);
+}
+
+/*Professional page */
+/* Class selector*/
+.resume-header {
+    text-align: center;
+    background-color: #EAF2FB;
+    padding: 15px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+}
+
+.resume {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    padding: 8px 0;
+}
+
+.resume span {
+    color: var(--muted-color);
+}
+
+/* Personality page */
+article {
+    background-color: #F7FAFE;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 15px;
+    margin: 15px 0;
+}
+
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figure img {
+    width: 250px;
+}
+
+blockquote {
+    background-color: #EAF2FB;
+    border-left: 5px solid var(--accent-color);
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Home page image */
+main section img {
+    display: block;
+    margin: 0 auto;
+    max-width: 280px;
+}
+
+
+/* Adjacent sibling selector*/
+h3 + p {
+    margin-top: 5px;
+}
+
+/* Footer*/
+footer {
+    background-color: #E4EDF8;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*  Tablets responsiveness */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    main section {
+        padding: 18px;
+    }
+
+    .resume {
+        flex-direction: column;
+    }
+}
+
+/* Mobile phones responsiveness */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    main section {
+        padding: 15px;
+    }
+
+    figure img,
+    main section img {
+        width: 100%;
+    }
+}

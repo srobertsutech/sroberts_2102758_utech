@@ -1,0 +1,231 @@
+/* CSS*/
+
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+color: #1f2937;
+background-color: #eaf3fb;
+}
+
+/* Header */
+#pageheader {
+background-color: #174a7e;
+color: white;
+text-align: center;
+padding: 30px 15px;
+}
+
+#pageheader h1 {
+color: white;
+margin: 10px 0;
+}
+
+.university {
+color: #b9dcf5;
+font-size: 18px;
+font-weight: bold;
+margin: 0;
+}
+
+.subtitle {
+margin: 0;
+color: white;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+color: #174a7e;
+}
+
+h2 {
+border-bottom: 3px solid #5ba4d7;
+padding-bottom: 5px;
+}
+
+/* Navigation bar */
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+background-color: #5ba4d7;
+}
+
+nav li a {
+display: block;
+padding: 12px 20px;
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav li a:hover {
+background-color: #174a7e;
+}
+
+/* Main */
+main {
+max-width: 900px;
+margin: auto;
+padding: 15px;
+}
+
+main > section {
+background-color: white;
+margin: 20px 0;
+padding: 20px;
+border-radius: 8px;
+}
+
+/* About Me */
+.about-class {
+display: flex;
+gap: 25px;
+align-items: center;
+}
+
+.about-class figure {
+margin: 0;
+}
+
+.about-class img {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+border: 5px solid #5ba4d7;
+}
+
+.about-text {
+flex: 1;
+}
+
+.highlight {
+color: #174a7e;
+font-weight: bold;
+}
+
+/* Course list */
+.course-class {
+padding-left: 25px;
+}
+
+
+/* Table */
+.table-wrap {
+overflow-x: auto;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+min-width: 450px;
+}
+
+caption {
+text-align: left;
+font-style: italic;
+margin-bottom: 8px;
+}
+
+th {
+background-color: #174a7e;
+color: white;
+}
+
+th,
+td {
+padding: 10px;
+border: 1px solid #b8cfe0;
+text-align: left;
+}
+
+tbody tr:nth-child(even) {
+background-color: #eaf3fb;
+}
+
+/* Contact form */
+form {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+label {
+font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+padding: 10px;
+border: 1px solid #8fb3cc;
+border-radius: 5px;
+font-size: 16px;
+font-family: Arial, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+outline: 2px solid #5ba4d7;
+}
+
+/* Submit button */
+button[type="submit"] {
+width: fit-content;
+margin-top: 8px;
+padding: 10px 20px;
+background-color: #174a7e;
+color: white;
+border: none;
+border-radius: 5px;
+font-weight: bold;
+cursor: pointer;
+}
+
+button[type="submit"]:hover {
+background-color: #5ba4d7;
+color: #174a7e;
+}
+
+/* Footer */
+footer {
+background-color: #174a7e;
+color: white;
+text-align: center;
+padding: 15px;
+}
+
+footer p {
+margin: 5px;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+
+nav ul {
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-class {
+    flex-direction: column;
+    text-align: center;
+}
+
+main > section {
+    padding: 15px;
+}
+
+button[type="submit"] {
+    width: 100%;
+}
+
+}
